@@ -72,11 +72,14 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
             border-radius: 8px;
+            max-width: 90%;
+            text-align: center;
         }
         
         .popup img {
             max-width: 100%;
             height: auto;
+            margin-bottom: 15px;
         }
         
         .popup-overlay {
@@ -110,7 +113,9 @@
         }
     </style>
     <script>
-        function showPopup() {
+        function showPopup(imageSrc, description) {
+            document.querySelector('.popup img').src = imageSrc;
+            document.querySelector('.popup p').textContent = description;
             document.querySelector('.popup-overlay').style.display = 'block';
             document.querySelector('.popup').style.display = 'block';
         }
@@ -139,9 +144,9 @@
             <div class="card">
                 <h2>Projects</h2>
                 <ul>
-                    <li><a href="#" onclick="showPopup()">Communities</a> - Extracted data from various online communities to analyze engagement trends.</li>
-                    <li><a href="#">Data Mining Project 2</a> - Built a Python script to gather real estate data for property insights.</li>
-                    <li><a href="#">API Integration Project 3</a> - Developed a custom tool that interfaces with various APIs for data aggregation.</li>
+                    <li><a href="#" onclick="showPopup('projects/thehiveindex.png', 'This image showcases the data extracted from various online communities, highlighting user engagement and activity trends over time.')">Communities</a> - Extracted data from various online communities to analyze engagement trends.</li>
+                    <li><a href="#" onclick="showPopup('https://via.placeholder.com/600', 'This image represents the gathered real estate data for analyzing property market trends and insights.')">Data Mining Project 2</a> - Built a Python script to gather real estate data for property insights.</li>
+                    <li><a href="#" onclick="showPopup('https://via.placeholder.com/600', 'This image illustrates the custom tool developed for integrating and aggregating data from various APIs.')">API Integration Project 3</a> - Developed a custom tool that interfaces with various APIs for data aggregation.</li>
                 </ul>
             </div>
         </section>
@@ -157,7 +162,8 @@
     <div class="popup-overlay" onclick="closePopup()"></div>
     <div class="popup">
         <button class="close-popup" onclick="closePopup()">Close</button>
-        <img src="projects/thehiveindex.png" alt="Communities Project Image">
+        <img src="" alt="Project Image">
+        <p></p>
     </div>
     
     <footer>
