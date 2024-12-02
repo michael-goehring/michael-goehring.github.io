@@ -1,0 +1,27 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+header p {
+    color: #bbbbbb;
+}
+
+footer {
+    background: #222;
+    color: #bbbbbb;
+}
+
+button {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+button:hover {
+    background-color: #666;
+}
