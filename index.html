@@ -22,7 +22,7 @@
         function toggleTheme() {
             const themeStylesheet = document.getElementById('theme-stylesheet');
             if (themeStylesheet.getAttribute('href') === 'theme.css') {
-                themeStylesheet.setAttribute('href', 'dark-theme.css');
+                themeStylesheet.setAttribute('href', 'theme-dark.css');
                 localStorage.setItem('theme', 'dark');
             } else {
                 themeStylesheet.setAttribute('href', 'theme.css');
@@ -33,7 +33,7 @@
         window.onload = function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
-                document.getElementById('theme-stylesheet').setAttribute('href', 'dark-theme.css');
+                document.getElementById('theme-stylesheet').setAttribute('href', 'theme-dark.css');
             }
         }
     </script>
